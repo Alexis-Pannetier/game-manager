@@ -1,0 +1,30 @@
+<div class="game-list vertical">
+
+  <app-game-list-filter></app-game-list-filter>
+
+  <section class="card-container horizontal center">
+
+    <article class="card" *ngFor="let game of games">
+
+      <div class="card-top horizontal space-between">
+        <div class="card-top-left vertical">
+          <p class="title"><b>{{game.nom}}</b></p>
+          <p><b>Type :</b> {{game.type}}</p>
+        </div>
+        <p class="note"><b>Note :</b> {{game.note}} / 20</p>
+      </div>
+      <img [src]="game.image" />
+      <div class="card-content vertical">
+        <p class="description"><b>Description :</b> {{shortDescription(game.description)}}</p>
+        <div class="card-bottom horizontal">
+          <button class="custom-button">Follow</button>
+          <button class="custom-button">Share</button>
+          <button class="custom-button">Buy</button>
+        </div>
+      </div>
+
+    </article>
+
+  </section>
+
+</div>

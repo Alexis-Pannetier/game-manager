@@ -1,0 +1,50 @@
+.game-list {
+  width: 100vw;
+}
+
+.card {
+  position: relative;
+  background-color: white;
+  border-radius: 10px;
+  margin: 20px;
+  min-height: 100%;
+  max-width: 500px;
+  max-height: 100%;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: 2px 2px 4px black;
+}
+
+.card-top,
+.card-content {
+  padding: 10px;
+}
+
+.card-bottom {
+  bottom: 0;
+}
+
+.card-top-left {
+  text-align: start;
+}
+
+.card .title {
+  font-size: 24px;
+}
+
+
+.note {
+  margin: auto 0 auto 0;
+}
+
+.card img {
+  flex: auto;
+  max-height: 300px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card .description {
+  text-align: start;
+  height: 100%;
+}

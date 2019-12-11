@@ -1,0 +1,18 @@
+<div class="game-list-filter center">
+
+  <form class="vertical">
+    <div class="horizontal">
+      <input placeholder="Nom du jeu" value={{filterNom}} />
+      <input placeholder="Editeur du jeu" value={{filterEditeur}} />
+      <select>
+        <option name="default" disabled hidden selected>Type de jeu</option>
+        <option *ngFor="let type of filterType" [value]="type">{{type}}</option>
+      </select>
+    </div>
+    <div class="horizontal center">
+      <button class="large-button" type="submit">Filtrer</button>
+      <button class="large-button" type="reset">Reset</button>
+    </div>
+  </form>
+
+</div>

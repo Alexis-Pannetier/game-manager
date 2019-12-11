@@ -1,1 +1,78 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+  margin: 0;
+  background-color: lightskyblue;
+  width: 100vw;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 8px 0;
+}
+
+p {
+  margin: 0;
+  vertical-align: middle;
+}
+
+button {
+  background-color: white;
+  color: #222222;
+  border-radius: 5px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+button,
+input,
+select {
+  padding: 8px;
+  margin: 2px;
+}
+
+.large-button {
+  min-width: 80px;
+}
+
+.custom-button {
+  min-width: 80px;
+  border: none;
+  font-weight: bold;
+  color: grey;
+  text-transform: uppercase
+}
+
+.vertical {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.horizontal {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.center {
+  display: flex;
+  text-align: center;
+  vertical-align: middle;
+  justify-content: center;
+}
+
+.space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.margin-auto {
+  margin: auto;
+}
