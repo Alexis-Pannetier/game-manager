@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GameTypeEnum } from '../game-type-enum/game-type-enum.component';
 
 @Component({
   selector: 'app-game-list-filter',
@@ -7,20 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GameListFilterComponent implements OnInit {
 
-  filterNom;
-  filterType;
+  gameType = GameTypeEnum;
+  gameTypeOptions = [];
 
   constructor() {
-    this.filterType = [
-      "Action",
-      "Course",
-      "Hack'n Slash",
-      "Jeux de carte",
-      "Stratégie"
-    ];
   }
-  ngOnInit() {
 
+  ngOnInit() {
+    this.gameTypeOptions = Object.keys(this.gameType);
   }
 
 }

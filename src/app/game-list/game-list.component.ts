@@ -55,6 +55,9 @@ export class GameListComponent implements OnInit {
   ngOnInit() {
   }
 
+  onClick(): void {
+    console.log("LOL");
+  }
 
   public shortDescription(str) {
     if (str.split(' ').length <= 20) {
