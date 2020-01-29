@@ -17,7 +17,8 @@
       <div class="card-body vertical">
         <p class="description"><b>Description :</b> {{shortDescription(game.description)}}</p>
 
-        <app-button-group-card class="card-bottom" [gameName]=game.nom></app-button-group-card>
+        <app-button-group-card class="card-bottom" (click)="handleButton(game.nom, $event)">
+        </app-button-group-card>
 
       </div>
 

@@ -55,8 +55,8 @@ export class GameListComponent implements OnInit {
   ngOnInit() {
   }
 
-  onClick(): void {
-    console.log("LOL");
+  public handleButton(gameName, event) {
+    alert("Jeux: " + gameName + " : " + event.target.innerText + " bouton cliqué.");
   }
 
   public shortDescription(str) {
