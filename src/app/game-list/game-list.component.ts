@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class GameListComponent implements OnInit {
 
   games;
+  cardWidth = 500;
 
   constructor() {
     this.games =
@@ -57,6 +58,20 @@ export class GameListComponent implements OnInit {
 
   public handleButton(gameName, event) {
     alert("Jeux: " + gameName + " : " + event.target.innerText + " bouton cliqué.");
+  }
+
+  public handleCardSize(sign) {
+    switch (sign) {
+      case '+':
+        this.cardWidth += 10;
+        break;
+      case '-':
+        this.cardWidth -= 10;
+        break;
+      case '0':
+        this.cardWidth = 500;
+        break;
+    }
   }
 
   public shortDescription(str) {

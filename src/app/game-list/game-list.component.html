@@ -3,8 +3,7 @@
   <app-game-list-filter></app-game-list-filter>
 
   <section class="card-container horizontal center">
-
-    <article class="card" *ngFor="let game of games">
+    <article class="card" *ngFor="let game of games" [style.height.px]="cardWidth">
 
       <div class="card-top space-between">
         <div class="card-top-left vertical">
@@ -17,13 +16,19 @@
       <div class="card-body vertical">
         <p class="description"><b>Description :</b> {{shortDescription(game.description)}}</p>
 
+
+        <div class="size-button">
+          <Button (click)="handleCardSize('-')">-</Button>
+          <Button (click)="handleCardSize('0')">Reset</Button>
+          <Button (click)="handleCardSize('+')">+</Button>
+        </div>
+
         <app-button-group-card class="card-bottom" (click)="handleButton(game.nom, $event)">
         </app-button-group-card>
 
       </div>
 
     </article>
-
   </section>
 
 </div>
