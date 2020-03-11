@@ -14,7 +14,7 @@ export class GameListFilterComponent implements OnInit {
   }
 
   ngOnInit() {
-    new GameCategoryFakeApiService().getAll().subscribe(data => { this.gameTypeOptions = data });
+    new GameCategoryFakeApiService().getAll().subscribe(data => { setTimeout(() => { this.gameTypeOptions = data }, 2000) });
   }
 
 }

@@ -14,7 +14,7 @@ import { ButtonGroupCardComponent } from './button-group-card/button-group-card.
     ButtonGroupCardComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -6,15 +6,20 @@ import { GameFakeApiService } from "../service/game-fake-api.service";
   templateUrl: './game-list.component.html',
   styleUrls: ['./game-list.component.css']
 })
+
 export class GameListComponent implements OnInit {
 
   games;
+  gameIsLoading = false;
   cardWidth = 500;
 
   ngOnInit() {
-    this.games = new GameFakeApiService().getAll();
-    new GameFakeApiService().getAll().subscribe(data => { this.games = data });
-
+    new GameFakeApiService().getAll().subscribe(data => {
+      setTimeout(() => {
+        this.games = data;
+        this.gameIsLoading = true;
+      }, 2000)
+    });
   }
 
   public handleButton(gameName, event) {
@@ -41,6 +46,14 @@ export class GameListComponent implements OnInit {
     } else {
       return str.split(' ', 20).join(' ') + '...';
     }
+  }
+
+  public delete(id) {
+    this.games.forEach((game, index) => {
+      if (game.id = id) {
+        this.games.slice(index);
+      }
+    });
   }
 
 }
