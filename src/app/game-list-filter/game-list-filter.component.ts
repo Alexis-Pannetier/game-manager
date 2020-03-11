@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { GameTypeEnum } from '../game-type-enum/game-type-enum.component';
+import { GameCategoryFakeApiService } from "../service/game-category-fake-api.service";
 
 @Component({
   selector: 'app-game-list-filter',
@@ -8,14 +8,13 @@ import { GameTypeEnum } from '../game-type-enum/game-type-enum.component';
 })
 export class GameListFilterComponent implements OnInit {
 
-  gameType = GameTypeEnum;
-  gameTypeOptions = [];
+  gameTypeOptions;
 
   constructor() {
   }
 
   ngOnInit() {
-    this.gameTypeOptions = Object.keys(this.gameType);
+    new GameCategoryFakeApiService().getAll().subscribe(data => { this.gameTypeOptions = data });
   }
 
 }

@@ -2,11 +2,13 @@
 
   <form class="vertical">
     <div class="horizontal">
-      <input placeholder="Nom du jeu" value={{filterNom}} />
-      <input placeholder="Editeur du jeu" value={{filterEditeur}} />
+      <input placeholder="Nom du jeu" [value]="filterNom" />
+      <input placeholder="Editeur du jeu" [value]="filterEditeur" />
       <select>
         <option name="default" disabled hidden selected>Type de jeu</option>
-        <option *ngFor="let type of gameTypeOptions" [value]="type" [label]="gameType[type]"></option>
+        <ng-container *ngIf="gameTypeOptions">
+          <option *ngFor="let type of gameTypeOptions" [value]="type.id">{{type.name}}</option>
+        </ng-container>
       </select>
     </div>
     <div class="horizontal center">
